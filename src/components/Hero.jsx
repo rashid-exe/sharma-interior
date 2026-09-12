@@ -32,8 +32,8 @@ export default function Hero() {
       <div className="hero-overlay" />
 
       {/* Content */}
-      <div className="hero-content w-full px-6 md:px-16 lg:px-24 pt-24">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-screen py-32">
+      <div className="hero-content w-full pt-24">
+        <div className="page-container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-screen py-32">
           {/* Left */}
           <div>
             <div className="section-label mb-8" style={{ animationDelay: '0.1s' }}>
@@ -61,7 +61,7 @@ export default function Hero() {
                 <ArrowRight size={16} />
               </Link>
               <a
-                href="https://wa.me/919625352772"
+                href="https://wa.me/917838733356"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline"
@@ -75,7 +75,7 @@ export default function Hero() {
               {[
                 { num: `${projects.length || 345}+`, label: 'Real Photos' },
                 { num: '8', label: 'Specialities' },
-                { num: '8+', label: 'Years Experience' },
+                { num: '5+', label: 'Years Service' },
               ].map(({ num, label }, i) => (
                 <div key={i} className="text-left">
                   <div className="font-display text-3xl gold-gradient-text font-medium">{num}</div>

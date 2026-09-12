@@ -6,17 +6,17 @@ const CONTACT_CARDS = [
   {
     icon: Phone,
     title: 'Call Us',
-    value: '+91 96253 52772',
+    value: '+91 99718 70698',
     sub: 'Mon–Sat, 9am–7pm',
-    href: 'tel:99',
+    href: 'tel:9971870698',
     cta: 'Call Now',
   },
   {
     icon: MessageCircle,
     title: 'WhatsApp',
-    value: '+91 96253 52772',
+    value: '+91 78387 33356',
     sub: 'Quick response guaranteed',
-    href: 'https://wa.me/919625352772?text=Hi%20Sharma%20Interior%2C%20I%27m%20interested%20in%20an%20interior%20consultation.',
+    href: 'https://wa.me/917838733356?text=Hi%20Sharma%20Interior%2C%20I%27m%20interested%20in%20an%20interior%20consultation.',
     cta: 'Start Chat',
     highlight: true,
   },
@@ -24,7 +24,7 @@ const CONTACT_CARDS = [
     icon: MapPin,
     title: 'Service Areas',
     value: 'Noida · Greater Noida',
-    sub: 'Ghaziabad & all of NCR',
+    sub: 'Ghaziabad & NCR',
     href: null,
     cta: null,
   },
@@ -64,7 +64,7 @@ export default function Contact() {
     <>
       {/* Header */}
       <div
-        className="pt-36 pb-20 px-6 md:px-12 lg:px-24 relative overflow-hidden text-center"
+        className="pt-36 pb-16 relative overflow-hidden text-center"
         style={{
           background: 'linear-gradient(to bottom, var(--charcoal-2) 0%, var(--charcoal) 100%)',
           borderBottom: '1px solid rgba(201,169,110,0.1)',
@@ -73,21 +73,24 @@ export default function Contact() {
         <div className="absolute inset-0 opacity-8"
           style={{ backgroundImage: 'radial-gradient(circle at 50% 80%, #c9a96e 0%, transparent 60%)' }}
         />
-        <div className="relative max-w-2xl mx-auto">
-          <div className="section-label justify-center mb-6">Let's Connect</div>
-          <h1 className="font-display font-light text-cream mb-4" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
-            Start Your <span className="gold-gradient-text italic">Dream Project</span>
-          </h1>
-          <p className="text-cream/50 text-lg leading-relaxed">
-            Reach out on WhatsApp or call us — we'd love to bring your vision to life. Initial consultation is always free.
-          </p>
+        <div className="page-container relative">
+          <div className="max-w-2xl mx-auto">
+            <div className="section-label justify-center mb-6">Let's Connect</div>
+            <h1 className="font-display font-light text-cream mb-4" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
+              Start Your <span className="gold-gradient-text italic">Dream Project</span>
+            </h1>
+            <p className="text-cream/50 text-lg leading-relaxed">
+              Reach out on WhatsApp or call us — we'd love to bring your vision to life. Initial consultation is always free.
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Contact Cards */}
-      <section className="py-20 px-6 md:px-12 lg:px-24" style={{ background: 'var(--charcoal)' }}>
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {CONTACT_CARDS.map(({ icon: Icon, title, value, sub, href, cta, highlight }, i) => (
+      <section className="section-py" style={{ background: 'var(--charcoal)' }}>
+        <div className="page-container">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+           {CONTACT_CARDS.map(({ icon: Icon, title, value, sub, href, cta, highlight }, i) => (
             <div
               key={i}
               className="glass-card p-6 flex flex-col gap-4 group transition-all duration-300 hover:-translate-y-1"
@@ -126,15 +129,17 @@ export default function Contact() {
               )}
             </div>
           ))}
+          </div>
         </div>
       </section>
 
       {/* WhatsApp CTA - Main */}
       <section
-        className="py-20 px-6 md:px-12 lg:px-24"
+        className="section-py"
         style={{ background: 'var(--charcoal-2)', borderTop: '1px solid rgba(201,169,110,0.08)' }}
       >
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="page-container">
+          <div className="max-w-3xl mx-auto text-center">
           <div className="section-label justify-center mb-6">Fastest Way to Reach Us</div>
           <h2 className="font-display font-light text-cream mb-4" style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}>
             Send Us a <span className="gold-gradient-text italic">WhatsApp Message</span>
@@ -161,7 +166,7 @@ export default function Contact() {
           </div>
 
           <a
-            href={`https://wa.me/919625352772?text=${whatsappTemplateMsg}`}
+            href={`https://wa.me/917838733356?text=${whatsappTemplateMsg}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold inline-flex"
@@ -171,12 +176,13 @@ export default function Contact() {
             </svg>
             Open WhatsApp Chat
           </a>
+          </div>
         </div>
       </section>
 
       {/* Services List */}
-      <section className="py-20 px-6 md:px-12 lg:px-24" style={{ background: 'var(--charcoal)' }}>
-        <div className="max-w-5xl mx-auto">
+      <section className="section-py" style={{ background: 'var(--charcoal)' }}>
+        <div className="page-container">
           <div className="section-label mb-8">What We Offer</div>
           <h2 className="font-display font-light text-cream mb-10" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)' }}>
             Our <span className="gold-gradient-text italic">Services</span>
@@ -198,7 +204,7 @@ export default function Contact() {
 
       {/* WhatsApp FAB */}
       <a
-        href="https://wa.me/919625352772"
+        href="https://wa.me/917838733356"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-fab"

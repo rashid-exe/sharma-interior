@@ -83,7 +83,7 @@ export default function Catalogue() {
     <>
       {/* Page Header */}
       <div
-        className="pt-36 pb-16 px-6 md:px-12 lg:px-24 relative overflow-hidden"
+        className="pt-36 pb-12 relative overflow-hidden"
         style={{
           background: 'linear-gradient(to bottom, var(--charcoal-2) 0%, var(--charcoal) 100%)',
           borderBottom: '1px solid rgba(201,169,110,0.1)',
@@ -92,7 +92,7 @@ export default function Catalogue() {
         <div className="absolute inset-0 opacity-5"
           style={{ backgroundImage: 'radial-gradient(circle at 80% 50%, #c9a96e 0%, transparent 60%)' }}
         />
-        <div className="max-w-7xl mx-auto relative">
+        <div className="page-container relative">
           <div className="flex items-center justify-between gap-4 mb-5">
             <div className="section-label">Our Work Gallery</div>
             <button
@@ -140,14 +140,14 @@ export default function Catalogue() {
 
       {/* Controls */}
       <div
-        className="sticky top-16 z-40 px-6 md:px-12 lg:px-24 py-4"
+        className="sticky top-16 z-40 py-4"
         style={{
           background: 'rgba(13,13,13,0.96)',
           backdropFilter: 'blur(20px)',
           borderBottom: '1px solid rgba(201,169,110,0.08)',
         }}
       >
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+        <div className="page-container flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
           {/* Filter bar */}
           <div className="overflow-x-auto w-full sm:w-auto pb-1">
             <FilterBar
@@ -181,8 +181,8 @@ export default function Catalogue() {
       </div>
 
       {/* Grid */}
-      <main className="min-h-screen px-6 md:px-12 lg:px-24 py-12" style={{ background: 'var(--charcoal)' }}>
-        <div className="max-w-7xl mx-auto">
+      <main className="min-h-screen section-py" style={{ background: 'var(--charcoal)' }}>
+        <div className="page-container">
           {filtered.length === 0 ? (
             <div className="text-center py-24">
               <div className="text-5xl mb-4">🔍</div>
@@ -233,7 +233,7 @@ export default function Catalogue() {
 
       {/* WhatsApp FAB */}
       <a
-        href="https://wa.me/919625352772"
+        href="https://wa.me/917838733356"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-fab"

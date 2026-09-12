@@ -30,7 +30,7 @@ export default function Footer() {
 
   return (
     <footer style={{ background: 'var(--charcoal-2)', borderTop: '1px solid rgba(201,169,110,0.12)' }}>
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="page-container py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand */}
         <div className="lg:col-span-1">
           <Link to="/" className="flex items-center gap-3 mb-5">
@@ -40,13 +40,13 @@ export default function Footer() {
             Crafting bespoke interiors that blend aesthetics with functionality. Serving Noida, Greater Noida & Ghaziabad since 2016.
           </p>
           <div className="flex items-center gap-3">
-            <a href="#" className="w-8 h-8 flex items-center justify-center border border-gold/20 text-cream/40 hover:border-gold hover:text-gold transition-all">
+            <a href="https://www.instagram.com/sharma.interior9?igsi=MTk5aWptbmxyOHBs" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center border border-gold/20 text-cream/40 hover:border-gold hover:text-gold transition-all" aria-label="Instagram">
               <InstagramIcon />
             </a>
-            <a href="#" className="w-8 h-8 flex items-center justify-center border border-gold/20 text-cream/40 hover:border-gold hover:text-gold transition-all">
+            <a href="https://www.facebook.com/share/1KsWNibCde/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center border border-gold/20 text-cream/40 hover:border-gold hover:text-gold transition-all" aria-label="Facebook">
               <FacebookIcon />
             </a>
-            <a href="#" className="w-8 h-8 flex items-center justify-center border border-gold/20 text-cream/40 hover:border-gold hover:text-gold transition-all">
+            <a href="https://youtube.com/@sharmainterior7707?si=FfCnX9rOYBugMNrU" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center border border-gold/20 text-cream/40 hover:border-gold hover:text-gold transition-all" aria-label="YouTube">
               <YoutubeIcon />
             </a>
           </div>
@@ -86,16 +86,19 @@ export default function Footer() {
           <h4 className="text-xs text-gold tracking-widest uppercase mb-5">Contact Us</h4>
           <div className="flex flex-col gap-4">
             <a
-              href="tel:9625352772"
+              href="tel:9971870698"
               className="flex items-center gap-3 text-cream/50 hover:text-gold transition-colors group"
             >
               <div className="w-8 h-8 flex items-center justify-center border border-gold/20 group-hover:border-gold/50 transition-colors flex-shrink-0">
                 <Phone size={13} className="text-gold" />
               </div>
-              <span className="text-sm">+91 96253 52772</span>
+              <div className="flex flex-col">
+                <span className="text-xs text-cream/30 uppercase tracking-wider">Mobile</span>
+                <span className="text-sm">+91 99718 70698</span>
+              </div>
             </a>
             <a
-              href="https://wa.me/919625352772"
+              href="https://wa.me/917838733356"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-cream/50 hover:text-gold transition-colors group"
@@ -103,13 +106,16 @@ export default function Footer() {
               <div className="w-8 h-8 flex items-center justify-center border border-gold/20 group-hover:border-gold/50 transition-colors flex-shrink-0">
                 <MessageCircle size={13} className="text-gold" />
               </div>
-              <span className="text-sm">WhatsApp</span>
+              <div className="flex flex-col">
+                <span className="text-xs text-cream/30 uppercase tracking-wider">WhatsApp</span>
+                <span className="text-sm">+91 78387 33356</span>
+              </div>
             </a>
             <div className="flex items-start gap-3 text-cream/40">
               <div className="w-8 h-8 flex items-center justify-center border border-gold/10 flex-shrink-0 mt-0.5">
                 <MapPin size={13} className="text-gold/60" />
               </div>
-              <span className="text-sm leading-relaxed">Noida · Greater Noida · Ghaziabad, NCR</span>
+              <span className="text-sm leading-relaxed">Noida · Greater Noida · Ghaziabad</span>
             </div>
           </div>
         </div>
@@ -117,15 +123,17 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div
-        className="border-t px-6 md:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3"
+        className="border-t py-5 flex flex-col sm:flex-row items-center justify-between gap-3"
         style={{ borderColor: 'rgba(201,169,110,0.08)' }}
       >
-        <p className="text-cream/25 text-xs tracking-wider">
-          © {new Date().getFullYear()} Sharma Interior. All rights reserved.
-        </p>
-        <p className="text-cream/20 text-xs">
-          Noida · Greater Noida · Ghaziabad
-        </p>
+        <div className="page-container flex flex-col sm:flex-row items-center justify-between gap-3 w-full">
+          <p className="text-cream/25 text-xs tracking-wider">
+            © {new Date().getFullYear()} Sharma Interior. All rights reserved.
+          </p>
+          <p className="text-cream/20 text-xs">
+            Noida · Greater Noida · Ghaziabad
+          </p>
+        </div>
       </div>
     </footer>
   );

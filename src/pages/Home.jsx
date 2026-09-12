@@ -39,8 +39,8 @@ export default function Home() {
       <StatsBar />
 
       {/* Featured Projects */}
-      <section ref={featuredRef} className="py-28 px-6 md:px-12 lg:px-24" style={{ background: 'var(--charcoal)' }}>
-        <div className="max-w-7xl mx-auto">
+      <section ref={featuredRef} className="section-py" style={{ background: 'var(--charcoal)' }}>
+        <div className="page-container">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div className="reveal">
               <div className="section-label mb-5">Our Work</div>
@@ -53,7 +53,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {featuredProjects.map((project, i) => (
               <div
                 key={project.id}
@@ -68,58 +68,60 @@ export default function Home() {
       </section>
 
       {/* Why Sharma Interior */}
-      <section className="py-28 px-6 md:px-12 lg:px-24" style={{ background: 'var(--charcoal-2)' }}>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <div className="section-label mb-5">Why Choose Us</div>
-            <h2 className="font-display font-light text-cream mb-4" style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)' }}>
-              The Sharma Interior <span className="gold-gradient-text italic">Difference</span>
-            </h2>
-            <p className="text-cream/50 text-base leading-relaxed mb-10 max-w-lg">
-              We don't just design spaces — we craft experiences. Every project is handled with meticulous attention to detail, from the first sketch to the final finishing.
-            </p>
-            <div className="flex flex-col gap-6">
-              {WHY_US.map(({ title, desc }, i) => (
-                <div key={i} className="flex items-start gap-4">
-                  <CheckCircle size={20} className="text-gold flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h4 className="text-cream font-medium text-sm mb-1">{title}</h4>
-                    <p className="text-cream/40 text-sm leading-relaxed">{desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Testimonial card */}
-          <div className="glass-card p-8 rounded-sm" style={{ border: '1px solid rgba(201,169,110,0.15)' }}>
-            <div className="flex gap-1 mb-5">
-              {[...Array(5)].map((_, i) => <Star key={i} size={14} className="text-gold fill-gold" />)}
-            </div>
-            <p className="font-display text-xl text-cream font-light leading-relaxed mb-6 italic">
-              "Sharma Interior transformed our 2BHK into a home we're proud to show off. The modular kitchen and false ceiling in the living room are just stunning. Highly recommended for anyone in Noida."
-            </p>
-            <div className="flex items-center gap-3 pt-5 border-t" style={{ borderColor: 'rgba(201,169,110,0.15)' }}>
-              <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center font-display text-gold text-lg">R</div>
-              <div>
-                <div className="text-cream text-sm font-medium">Rajat & Priya Sinha</div>
-                <div className="text-cream/40 text-xs">Noida Sector 62</div>
-              </div>
-            </div>
-
-            {/* Second testimonial */}
-            <div className="mt-6 pt-6 border-t" style={{ borderColor: 'rgba(201,169,110,0.08)' }}>
-              <div className="flex gap-1 mb-3">
-                {[...Array(5)].map((_, i) => <Star key={i} size={12} className="text-gold fill-gold" />)}
-              </div>
-              <p className="text-cream/60 text-sm leading-relaxed italic mb-4">
-                "Professional team, beautiful work, and they finished ahead of schedule. The bedroom wardrobe design is exactly what we had envisioned."
+      <section className="section-py" style={{ background: 'var(--charcoal-2)' }}>
+        <div className="page-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="section-label mb-5">Why Choose Us</div>
+              <h2 className="font-display font-light text-cream mb-4" style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)' }}>
+                The Sharma Interior <span className="gold-gradient-text italic">Difference</span>
+              </h2>
+              <p className="text-cream/50 text-base leading-relaxed mb-10 max-w-lg">
+                We don't just design spaces — we craft experiences. Every project is handled with meticulous attention to detail, from the first sketch to the final finishing.
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center font-display text-gold text-sm">A</div>
+              <div className="flex flex-col gap-6">
+                {WHY_US.map(({ title, desc }, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <CheckCircle size={20} className="text-gold flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="text-cream font-medium text-sm mb-1">{title}</h4>
+                      <p className="text-cream/40 text-sm leading-relaxed">{desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Testimonial card */}
+            <div className="glass-card p-8 rounded-sm" style={{ border: '1px solid rgba(201,169,110,0.15)' }}>
+              <div className="flex gap-1 mb-5">
+                {[...Array(5)].map((_, i) => <Star key={i} size={14} className="text-gold fill-gold" />)}
+              </div>
+              <p className="font-display text-xl text-cream font-light leading-relaxed mb-6 italic">
+                "Sharma Interior transformed our 2BHK into a home we're proud to show off. The modular kitchen and false ceiling in the living room are just stunning. Highly recommended for anyone in Noida."
+              </p>
+              <div className="flex items-center gap-3 pt-5 border-t" style={{ borderColor: 'rgba(201,169,110,0.15)' }}>
+                <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center font-display text-gold text-lg">R</div>
                 <div>
-                  <div className="text-cream text-xs font-medium">Anita Verma</div>
-                  <div className="text-cream/40 text-xs">Greater Noida West</div>
+                  <div className="text-cream text-sm font-medium">Rajat &amp; Priya Sinha</div>
+                  <div className="text-cream/40 text-xs">Noida Sector 62</div>
+                </div>
+              </div>
+
+              {/* Second testimonial */}
+              <div className="mt-6 pt-6 border-t" style={{ borderColor: 'rgba(201,169,110,0.08)' }}>
+                <div className="flex gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => <Star key={i} size={12} className="text-gold fill-gold" />)}
+                </div>
+                <p className="text-cream/60 text-sm leading-relaxed italic mb-4">
+                  "Professional team, beautiful work, and they finished ahead of schedule. The bedroom wardrobe design is exactly what we had envisioned."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center font-display text-gold text-sm">A</div>
+                  <div>
+                    <div className="text-cream text-xs font-medium">Anita Verma</div>
+                    <div className="text-cream/40 text-xs">Greater Noida West</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -129,7 +131,7 @@ export default function Home() {
 
       {/* CTA Banner */}
       <section
-        className="py-24 px-6 text-center relative overflow-hidden"
+        className="section-py text-center relative overflow-hidden"
         style={{
           background: 'linear-gradient(135deg, #0d0d0d 0%, #1a1208 50%, #0d0d0d 100%)',
           borderTop: '1px solid rgba(201,169,110,0.15)',
@@ -139,27 +141,29 @@ export default function Home() {
         <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, #c9a96e 0%, transparent 70%)' }}
         />
-        <div className="relative max-w-2xl mx-auto">
-          <div className="section-label justify-center mb-6">Get Started Today</div>
-          <h2 className="font-display font-light text-cream mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
-            Ready to Transform <span className="gold-gradient-text italic">Your Space?</span>
-          </h2>
-          <p className="text-cream/50 mb-10 leading-relaxed">
-            Share your vision with us on WhatsApp — our designers respond within the hour.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="https://wa.me/919625352772?text=Hi%20Sharma%20Interior%2C%20I%27d%20like%20a%20free%20consultation."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold"
-            >
-              Get Free Consultation
-              <ArrowRight size={16} />
-            </a>
-            <Link to="/catalogue" className="btn-outline">
-              Browse Portfolio
-            </Link>
+        <div className="page-container relative">
+          <div className="max-w-2xl mx-auto">
+            <div className="section-label justify-center mb-6">Get Started Today</div>
+            <h2 className="font-display font-light text-cream mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
+              Ready to Transform <span className="gold-gradient-text italic">Your Space?</span>
+            </h2>
+            <p className="text-cream/50 mb-10 leading-relaxed">
+              Share your vision with us on WhatsApp — our designers respond within the hour.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="https://wa.me/917838733356?text=Hi%20Sharma%20Interior%2C%20I%27d%20like%20a%20free%20consultation."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold"
+              >
+                Get Free Consultation
+                <ArrowRight size={16} />
+              </a>
+              <Link to="/catalogue" className="btn-outline">
+                Browse Portfolio
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -177,7 +181,7 @@ export default function Home() {
 
       {/* WhatsApp FAB */}
       <a
-        href="https://wa.me/919625352772"
+        href="https://wa.me/917838733356"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-fab"

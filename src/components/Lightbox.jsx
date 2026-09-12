@@ -154,7 +154,7 @@ export default function Lightbox({ project, onClose, projects = [] }) {
             <div>
               <div className="border-t border-gold/10 pt-5 flex flex-col gap-3">
                 <a
-                  href={`https://wa.me/919625352772?text=${whatsappMsg}`}
+                  href={`https://wa.me/917838733356?text=${whatsappMsg}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gold w-full justify-center text-xs"
@@ -163,10 +163,10 @@ export default function Lightbox({ project, onClose, projects = [] }) {
                   <ExternalLink size={13} />
                 </a>
                 <a
-                  href="tel:9625352772"
+                  href="tel:9971870698"
                   className="btn-outline w-full justify-center text-xs"
                 >
-                  Call Us Directly (9625352772)
+                  Call Us Directly (9971870698)
                 </a>
               </div>
 

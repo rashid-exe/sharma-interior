@@ -54,11 +54,11 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:9625352772"
+              href="tel:9971870698"
               className="flex items-center gap-2 text-sm text-cream/70 hover:text-gold transition-colors duration-300"
             >
               <Phone size={14} />
-              <span className="tracking-wider">9625352772</span>
+              <span className="tracking-wider">9971870698</span>
             </a>
             <a href="/catalogue" className="btn-gold text-xs py-2.5 px-5">
               View Catalogue
@@ -105,11 +105,11 @@ export default function Navbar() {
             </NavLink>
           ))}
           <a
-            href="tel:9625352772"
+            href="tel:9971870698"
             className="flex items-center gap-2 text-cream/60 hover:text-gold transition-colors mt-4"
           >
             <Phone size={16} />
-            <span className="tracking-widest text-sm">9625352772</span>
+            <span className="tracking-widest text-sm">9971870698</span>
           </a>
         </div>
       </div>

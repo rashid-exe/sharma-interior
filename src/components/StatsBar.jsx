@@ -9,7 +9,7 @@ export default function StatsBar() {
   const stats = [
     { icon: Home, value: `${projects.length || 345}+`, label: 'Live Portfolio Photos', sub: 'Real executed work' },
     { icon: LayoutGrid, value: `${categories.length || 8}`, label: 'Speciality Categories', sub: 'Modular to Mandir' },
-    { icon: Award, value: '8+', label: 'Years of Excellence', sub: 'Since 2016' },
+    { icon: Award, value: '5+', label: 'Years of Service', sub: 'Since 2019' },
     { icon: Users, value: '450+', label: 'Happy Clients', sub: 'Noida · Gr. Noida · Gzb' },
   ];
 
@@ -30,7 +30,7 @@ export default function StatsBar() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 px-6 md:px-12 relative overflow-hidden"
+      className="section-py-sm relative overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #0d0d0d 0%, #141414 50%, #0d0d0d 100%)',
         borderTop: '1px solid rgba(201,169,110,0.12)',
@@ -45,8 +45,8 @@ export default function StatsBar() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto relative">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+      <div className="page-container relative">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {stats.map(({ icon: Icon, value, label, sub }, i) => (
             <div key={i} className={`reveal reveal-delay-${i + 1} text-center lg:text-left flex flex-col lg:flex-row items-center lg:items-start gap-4`}>
               {/* Icon */}
