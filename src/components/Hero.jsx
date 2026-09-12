@@ -74,8 +74,7 @@ export default function Hero() {
             <div className="flex items-center gap-8 mt-14 pt-8 border-t border-gold/10">
               {[
                 { num: `${projects.length || 345}+`, label: 'Real Photos' },
-                { num: '8', label: 'Specialities' },
-                { num: '5+', label: 'Years Service' },
+                { num: '10+', label: 'Years Service' },
               ].map(({ num, label }, i) => (
                 <div key={i} className="text-left">
                   <div className="font-display text-3xl gold-gradient-text font-medium">{num}</div>

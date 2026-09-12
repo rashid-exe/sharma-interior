@@ -9,7 +9,7 @@ export default function StatsBar() {
   const stats = [
     { icon: Home, value: `${projects.length || 345}+`, label: 'Live Portfolio Photos', sub: 'Real executed work' },
     { icon: LayoutGrid, value: `${categories.length || 8}`, label: 'Speciality Categories', sub: 'Modular to Mandir' },
-    { icon: Award, value: '5+', label: 'Years of Service', sub: 'Since 2019' },
+    { icon: Award, value: '5+', label: 'Years of Service', sub: '' },
     { icon: Users, value: '450+', label: 'Happy Clients', sub: 'Noida · Gr. Noida · Gzb' },
   ];
 
