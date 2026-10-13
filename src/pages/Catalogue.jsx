@@ -140,7 +140,7 @@ export default function Catalogue() {
 
       {/* Controls */}
       <div
-        className="sticky top-16 z-40 py-4"
+        className="sm:sticky sm:top-16 z-40 py-4"
         style={{
           background: 'rgba(13,13,13,0.96)',
           backdropFilter: 'blur(20px)',
